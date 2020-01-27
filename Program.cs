@@ -4,90 +4,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EmartApplication
+namespace Operators
 {
     class Program
     {
         static void Main(string[] args)
         {
-            while (true)
-            {
-                Console.WriteLine("Menu");
-                Console.WriteLine("1.Seller");
-                Console.WriteLine("2.Buyer");
-                Console.WriteLine("Enter your choice:");
-                int ch = int.Parse(Console.ReadLine());
-                if (ch == 1)
-                {
-                    Console.WriteLine("Enter id: ");
-                    int id = int.Parse(Console.ReadLine());
-                    Console.WriteLine("Enter Name:");
-                    string name = Console.ReadLine();
-                    Console.WriteLine("Enter phone number: ");
-                    string phno = Console.ReadLine();
-                    Console.WriteLine("Enter Email Id: ");
-                    string email = Console.ReadLine();
-                    Console.WriteLine("Enter Company Details: ");
-                    string cname = Console.ReadLine();
-                    Console.WriteLine("Enter GSTIN: ");
-                    string gstin = Console.ReadLine();
-                    Seller s = new Seller(id, name, phno, email, cname, gstin);
-                    while (true)
-                    {
-                        Console.WriteLine("Menu");
-                        Console.WriteLine("1.Add Products");
-                        Console.WriteLine("2.Display My Details");
-                        Console.WriteLine("3.Exit From Seller");
-                        Console.WriteLine("Enter your choice : ");
-                        int ch2 = int.Parse(Console.ReadLine());
-                        if (ch2 == 1)
-                            s.AddItems();
-                        else if (ch2 == 2)
-                            s.DisplayDetails();
-                        else if (ch2 == 3)
-                            break;
-                        else
-                            Console.WriteLine("Wrong Choice. Please select appropriate Option");
-                    }
+           // byte b = 5;
+            //byte b1 = (byte)(b + 5);
+            long l2 = 12500;
+            int i2 = (int)l2;
+            // Console.WriteLine(i2);
+            //int i = 256;
+            //byte b1 = (int)i;
+            float b1 = 1f;
+            int b2 = 2;
+            float b3 = b1 + b2;
+            Console.WriteLine(b3);
+            Console.ReadKey();
+            sbyte i1 = sbyte.Parse("123");
+            float f1 = float.Parse("123.3");
+            decimal d1=decimal.Parse()
 
-                }
-                else if (ch == 2)
-                {
-                    Console.WriteLine("Enter id: ");
-                    int id = int.Parse(Console.ReadLine());
-                    Console.WriteLine("Enter Name:");
-                    string name = Console.ReadLine();
-                    Console.WriteLine("Enter phone number: ");
-                    string phno = Console.ReadLine();
-                    Console.WriteLine("Enter Email Id: ");
-                    string email = Console.ReadLine();
-                    while (true)
-                    {
-                        Console.WriteLine("Menu For Buyer");
-                        Console.WriteLine("1.Display My Profile");
-                        Console.WriteLine("2.Search For Item");
-                        Console.WriteLine("3.Display All Items");
-                        Console.WriteLine("4.Exit From Buyer");
-                        Console.WriteLine("enter your Choice");
-                        BuyerBo bo = new BuyerBo(id, name, phno, email);
-                        int ch1 = int.Parse(Console.ReadLine());
-
-                        if (ch1 == 1)
-                            bo.DisplayCategory();
-                        else if (ch1 == 2)
-                            bo.Search();
-                        else if (ch1 == 3)
-                            break;
-                        else
-                            Console.WriteLine("Please select correct Option");
-                    }
-                }
-                else if (ch == 3)
-                    Environment.Exit(0);
-                else
-                    Console.WriteLine("Wrong Choice. Please select appropriate Option");
-
-            }
+            Console.WriteLine(i1);
+            Console.ReadKey();
         }
     }
 }
